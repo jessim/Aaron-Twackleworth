@@ -1,0 +1,133 @@
+/*
+
+Theme Name: Supemi Static
+Theme URI: http://onethousandseas.org/you/supemistatic
+Author: Zhong-I Ma
+Author URI: http://onethousandseas.org
+Version: 0.9
+License Statement: Public domain
+
+Tags: green, white, two-columns, fixed-width, custom-colors, custom-header, sticky-post, static website
+
+Description: Sister theme to <a href="http://onethousandseas.org/you/supemistatic">Supemi</a> for WordPress.  Cleaner, more professional look for oldskool static websites.  Go to <a href="http://onethousandseas.org/you/supemistatic">theme website</a> for instructions.
+
+*/
+
+/* ####################
+GENERAL
+#################### */
+
+body
+{
+font-family: sans-serif;
+text-align: center;
+}
+
+img {
+border: 0;
+}
+
+a:link {color:#64CC14; text-decoration:none; font-weight:bold;}
+a:visited {color:#64CC14; text-decoration:none; font-weight:bold;}
+a:active {color:#64CC14; text-decoration:underline; font-weight:bold;}
+a:hover {color:#64CC14; text-decoration:underline; font-weight:bold;}
+
+#fourohfour_css {		/*  Body of 404.  */
+font-size: xx-large; 
+text-align:center;
+}
+
+/* ####################
+EVERYTHING INSIDE
+#################### */
+
+#everything_inside_css {	/*  Everything inside, container div.  */
+margin:0 auto;
+text-align: left;
+padding-bottom:60px;
+overflow:hidden;
+width:600px;
+}
+
+#sidebar_css {		/*  Sidebar positioning.  */
+width:140px;
+float: left;
+font-size:large;
+line-height:1.25em;
+}
+
+#main_css {		/*  Main content positioning.  */
+width : 440px;
+float : right;
+}
+
+/* ####################
+HEADER/FOOTER
+#################### */
+
+#header_css {		/*  Typography and spacing of blog title to stand out.  */
+background-color:#64CC14;
+padding-top:50px;
+padding-bottom:50px;
+width: 600px;
+font-size:6em;
+margin-right:auto;
+margin-left:auto;
+margin-top: 25px;
+margin-bottom: 25px;
+}
+
+a:link#header_link_css {color:white; text-decoration:none; font-weight:bold;}		/*  Colors blog title link.  */
+a:visited#header_link_css {color:white; text-decoration:none; font-weight:bold;}
+a:active#header_link_css {color:white; text-decoration:none; font-weight:bold;}
+a:hover#header_link_css {color:white; text-decoration:none; font-weight:bold;}		
+
+#footer_css {		/*  Positions footer.  */
+clear:both;
+padding-top:15px;
+font-size:x-small;
+}
+
+/* ####################
+FIXES (CORRECTIONS FOR GLITCHES)
+#################### */
+
+#pullmenuback_css {			/*  Yanks the menu back to the left edge.  */
+margin-left:-25px;
+}
+
+.go_up_css {			/*  Aligns top of main content with top of sidebar.  */
+margin-top:0;
+}
+
+/* ####################
+OPTIONAL
+#################### */
+
+.sticky {			/*  Sticky post typography, if you have one.  WP  displays it along with the lone post on the front page, so there will be two posts total.  */
+font-size:x-large;
+}
+
+/*  .go_bold_supemi {		Bolds things and spaces them apart when needed.  Not used, leftover from Supemi, but I thought you might need it.  
+font-weight:bold;
+margin-top:60px;
+margin-bottom:15px;
+}  */
+
+/* ####################
+CSS CLASSES REQUIRED BY WORDPRESS
+#################### */
+
+.aligncenter {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.alignleft {
+	float: left;
+}
+
+.alignright {
+	float: right;
+}
