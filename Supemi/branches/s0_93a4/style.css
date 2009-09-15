@@ -23,7 +23,7 @@ W = Workaround.  Changing this may break the layout.
 
 body {
 background-color:white;  						/* O */
-font-family:garamond,georgia,"times new roman",serif;		/* O */
+font-family:'Helvetica Neue','HelveticaNeue',helvetica,sans-serif;	/* O */
 margin:0;
 }
 

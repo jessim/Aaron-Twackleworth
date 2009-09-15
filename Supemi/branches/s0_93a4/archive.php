@@ -1,4 +1,3 @@
-		query_posts($query_string . '&showposts=-1');
 <?php get_header() ?>
 
 <div id="everything_inside_supemi">  		<!-- BEGIN: EVERYTHING INSIDE -->
