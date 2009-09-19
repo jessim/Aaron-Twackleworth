@@ -33,14 +33,6 @@ border: 0;											/* O */
 
 #error-404 {										/*  Body of 404.  */
 font-size: xx-large; 
-margin-bottom:25px;
-text-align:center;
-}
-
-#error-404-nav {										/*  Header nav of 404.  */
-font-family:serif;
-margin-bottom:60px;
-margin-top:60px;
 text-align:center;
 }
 
