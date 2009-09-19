@@ -1,5 +1,5 @@
 <div id="optional-sidebar">
-<ul style="list-style: none;margin-left:-40px;">
+<ul id="optional-sidebar-list">
 <?php if ( function_exists ( 'dynamic_sidebar' ) && dynamic_sidebar('sidebar-optional') ) : endif; ?>
 </ul>
 </div>

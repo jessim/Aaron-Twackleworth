@@ -1,4 +1,4 @@
-/*
+0/*
 
 Theme Name: Supemi beta
 Theme URI: http://onethousandseas.org/you/supemi
@@ -9,7 +9,7 @@ Version: 0.93
 
 Tags: one-column, two-column, three-column, fixed-width, custom-colors, custom-header, sticky-post
 
-Description: Supemi = SUPEr MInimalist.  A skeleton theme I developed for personal use and am now releasing.  Text-only minimalist design with widget-ready bottom sidebar, optional right sidebar, breadcrumb navigation, full validation, no extraneous navigation cluttering usability, translation dropdown, unpaginated archives (returns full results on query) a minimum of files, and heavily commented for beginners.  Started from <a href="http://binarybonsai.com/wordpress/kubrick/">Kubrick</a> and <a href="http://www.plaintxt.org/themes/sandbox/">Sandbox</a>.  <a href="http://mtekk.weblogs.us/code/breadcrumb-navxt/">Breadcrumb NavXT</a> plugin required, theme instructions & further resources at <a href="http://onethousandseas.org/you/supemi">theme website</a>.
+Description: Supemi = SUPEr MInimalist.  A skeleton theme I developed for personal use and I'm releasing.  Text-only minimalist design with widget-ready bottom sidebar, optional right sidebar, breadcrumb navigation, full validation, no extraneous navigation cluttering usability, translation dropdown, unpaginated archives (returns full results on query) a minimum of files, and heavily commented for beginners.  Started from <a href="http://binarybonsai.com/wordpress/kubrick/">Kubrick</a> and <a href="http://www.plaintxt.org/themes/sandbox/">Sandbox</a>.  <a href="http://mtekk.weblogs.us/code/breadcrumb-navxt/">Breadcrumb NavXT</a> plugin required, theme instructions & further resources at <a href="http://onethousandseas.org/you/supemi">theme website</a>.
 
 Key:
 
@@ -22,22 +22,22 @@ W = Workaround.  Changing this may break the layout.
 /* GENERAL */
 
 body {
-background-color:white;  						/* O */
-font-family:'Helvetica Neue','HelveticaNeue',helvetica,sans-serif;	/* O */
+background-color:white;  								/* O */
+font-family:'Helvetica Neue', 'HelveticaNeue', helvetica, sans-serif;	/* O */
 margin:0;
 }
 
 img {
-border: 0;									/* O */
+border: 0;											/* O */
 }
 
-#error-404 {		/*  Body of 404.  */
+#error-404 {										/*  Body of 404.  */
 font-size: xx-large; 
 margin-bottom:25px;
 text-align:center;
 }
 
-#error-404-nav {	/*  Header nav of 404.  */
+#error-404-nav {										/*  Header nav of 404.  */
 font-family:serif;
 margin-bottom:60px;
 margin-top:60px;
@@ -46,99 +46,110 @@ text-align:center;
 
 /* EVERYTHING INSIDE */
 
-#content-container {						/*  Everything inside, all the content between header and footer.  */
+#content-container {									/*  All content between header and footer.  */
 margin:0 auto;
 overflow:hidden;
 padding-bottom:60px;
 width:900px;
 }
 
-#blog-title {							/*  Typography and spacing of blog title to stand out.  */
-font-size:3em;
-margin-top:60px;
+#blog-title {										/*  Blog title and spacing to stand out.  */
+font-size:3em;										/*  O  */
+margin-top:60px;										/*  O  */
 }	
 
-a:link#text-blog-title {					/*  Styles link if blog title is text.  Comment this entire section out if your title isn't text, such as a graphic.  */
-color:black; 
-text-decoration:none; 
+a:link#text-blog-title {								/*  Blog title is graphic?  Or text?  If text, fiddle with this.  If graphic, comment this entire section out.  */
+color:black; 										/*  O  */
+text-decoration:none;  									/*  O  */
 }
-a:visited#text-blog-title {
-color:black; 
-text-decoration:none;
+a:visited#text-blog-title {								
+color:black;  										/*  O  */
+text-decoration:none; 									/*  O  */
 }
-a:active#text-blog-title {
-background-color:black;
-color:white; 
-text-decoration:none; 
+a:active#text-blog-title {								
+background-color:black; 								/*  O  */
+color:white;  										/*  O  */
+text-decoration:none;  									/*  O  */
 }
-a:hover#text-blog-title {
-background-color:black;
-color:white; 
-text-decoration:none; 
+a:hover#text-blog-title {								
+background-color:black; 								/*  O  */
+color:white;  										/*  O  */
+text-decoration:none;  									/*  O  */
 }	
 
-#tagline-css{font-weight:bold;}
+#tagline-css {										
+font-weight:bold;	 									/*  O  */
+}
 
 /* TOP (POSTS) */
 
-#top-container {							/*  Div containing 1.  Date positioning div, 2.  Blog post positioning div.  */
+#top-container {										/*  top-container div contains post-container div & optional-sidebar div.  */
 margin: 0px auto;
 overflow:hidden;
 padding: 0px;
 width: 900px;
 }
 
-.post-container{	
+.post-container{										/*  post-container div contains date-css div and (inline) post styles.  */
 float:left;
 margin-bottom: 60px auto;
 margin-left: 0px auto;
 margin-right: 0px auto;
 margin-top: 0px auto;
 padding: 0px;
-text-align:justify;
+text-align:justify;									/*  R  */
 width: 700px;
 }
 
-.date-css {								/*  1.  Date positioning div.  */
+.date-css {											/*  Date positioning div.  */
 float: left;
-font-size:1.5em;
-font-weight:bold;
+font-size:1.5em;										/*  R  */
+font-weight:bold;										/*  R  */
 text-align:right;
 width: 175px;
 }
 
-/*  Nothing here.  */							/*  2.  Blog post positioning div is actually an inline style.  Why?  See: http://wordpress.org/support/topic/270619  */
+/*  Nothing 										Blog post positioning div is inline.  Why?  See: http://wordpress.org/support/topic/270619  
+to
+see
+here.  */									
 
-.top-align {								/*  W = Makes sure post titles align to top with dates.  */
-margin-top:0;
+.top-align {										/* Makes sure post titles align to top with dates.  */
+margin-top:0; 										/*  W  */
 }
 
-#meta-info {							/*  "single.php" meta info typography.  */
-font-size:x-small;
-font-weight:bold;
+#meta-info {										/*  "single.php" meta info typography.  */
+font-size:x-small;									/*  R  */
+font-weight:bold;										/*  R  */
 }
 
-.comment-space-indiv {							/*  Spaces comments apart.  */
-border-top:1px solid;
-margin-bottom:15px;
-padding-top:15px;
+.boldnspace {										/*  Bolds and spaces apart when needed.  */
+font-weight:bold;										/*  R  */
+margin-top:60px;										/*  R  */
+margin-bottom:15px;									/*  R  */
 }
 
-.comment-justify {							/*  Pretties up comment-to-avatar spacing by justifying.  */
-text-align:justify;
+.comment-space-indiv {									/*  Spaces comments apart.  */
+border-top:1px solid;									/*  R  */
+margin-bottom:15px;									/*  R  */
+padding-top:15px;										/*  R  */
 }
 
-.avatar {									/*  Spaces avatars in relation to comments.  */
-float:right;
-padding-left:5px;
+.comment-justify {									/*  Pretties up comment-to-avatar spacing by justifying.  */
+text-align:justify; 									/*  O  */
 }
 
-#response-field-pos {								/*  Spaces response fields down from rest of the page.  */
-margin-top:60px;
+.avatar {											/*  Spaces avatars in relation to comments.  */
+float:right;										/*  R  */
+padding-left:5px;										/*  R  */
 }
 
-#comment {									/*  Adjusts width of comment box.  */
-width:500px;
+#response-field-pos {									/*  Spaces response fields down from rest of the page.  */
+margin-top:60px;										/*  R  */
+}
+
+#comment {											/*  Adjusts width of comment box or it would be all over the page.  */
+width:500px;										/*  W  */
 }
 
 #optional-sidebar {
@@ -146,13 +157,13 @@ float: right;
 width: 175px;
 }
 
-.navigation {								/*  Positions navigation.  */
+.navigation {										/*  Positions navigation, fixes tricksyness if styles aren't clearly spelled out.  */
 margin-left : 200px;
 margin-right : 200px;
-padding-bottom : 120px;
-padding-top: 60px;
-text-align:center;
-width : 500px;
+padding-bottom : 120px;									/*  W  */
+padding-top: 60px;									/*  W  */
+text-align:center;									/*  W  */							
+width : 500px;										/*  W  */
 }
 
 #pastnav {
@@ -167,55 +178,60 @@ font-weight:bold;
 text-align:right;
 }
 
-.sticky {									/*  Sticky post typography.  */
-font-size:x-large;
+.sticky {											/*  Sticky post typography.  */
+font-size:x-large;									/*  R  */
 }
 
 /* BOTTOM & RIGHT (SIDEBARS) */
 
-#bottom-container {						/*  Div containing 1.  Left sidebar positioning div, 2.  Right sidebar positioning div.  */
+#bottom-container {									/*  bottom-container div contains left-sidebar div & right-sidebar div.  */
 margin-left:200px;	
 margin-right:200px;
 }
 
-#left-sidebar {							/*  1.  Left sidebar positioning div.  */
+#left-sidebar {										/*  Left sidebar positioning div.  */
 float:left;
 margin-left:-40px;
 width:49%;
 }
 
-#right-sidebar {							/*  2.  Right sidebar positioning div.  */
+#right-sidebar {										/*  Right sidebar positioning div.  */
 width:49%;
 float:right;
 margin-right:40px;
 }
 
 .widget-title,#left-sidebar,#right-sidebar,#optional-sidebar {		/*  Sidebar typography.  */
-color: gray;
-font-size:small;
+color: gray; 										/*  O  */								
+font-size:small; 										/*  O  */
+}
+
+#optional-sidebar-list {
+list-style: none;
+margin-left:-40px;
 }
 
 /* HEADER/FOOTER */
 
-#header-css {								/*  Positions header.  */
+#header-css {										/*  Positions header.  */
 margin-bottom:60px;
 text-align:center;
 }
 
-#subheader-css {							/*  Positions extra-title bits of the header.  */
-color:gray;
+#subheader-css {										/*  Positions extra-title bits of the header.  */
+color:gray;											/*  O  */
 overflow: hidden;
 width: 100%;
 }
 
-#subheader-translate {							/*  Positions breadcrumb.  */
+#subheader-translate {									/*  Positions breadcrumb.  */
 float: left;
 padding:8px;
 text-align: left;
 width: 200;
 }
 
-#subheaderforms-search {						/*  Positions forms (search, etc.)  */
+#subheaderforms-search {								/*  Positions search form.  */
 float: right;
 padding:8px;
 text-align: right;
@@ -223,25 +239,17 @@ width: 48%;
 }
 
 #breadcrumb-css {
-color:gray;
-margin-left:8px;
+color:gray;											/*  O  */
+margin-left:8px;										
 text-align:left;
 }
 
-#footer-css {								/*  Positions footer.  */
+#footer-css {										/*  Positions footer.  */
 clear:both;
-color:gray;
-padding-bottom:1px;
+color:gray;											
+padding-bottom:8px;
 padding-top:15px;
 text-align:center;
-}
-
-/* READABILITY */
-
-.boldnspace {								/*  Bolds things and spaces them apart when needed.  */
-font-weight:bold;
-margin-top:60px;
-margin-bottom:15px;
 }
 
 /* CSS CLASSES REQUIRED BY WORDPRESS */
