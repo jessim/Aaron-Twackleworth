@@ -8,9 +8,9 @@
 
 <p>Page not found.</p>
 
-<p>Perhaps you'd like to go back to <a href="<?php bloginfo('home'); ?>"><?php bloginfo(); ?></a>?</p>
+<p>You can start from the beginning again up there &uarr;</p>
 
-<p>Or search for what you want with the handy field up there?</p>
+<p>Or search for something I probably moved over there on the right &rarr;</p>
 
 </div>
 
