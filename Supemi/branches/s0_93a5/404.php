@@ -14,6 +14,6 @@
 
 </div>
 
-</div>					<!-- END: EVERYTHING INSIDE -->
+</div>				<!-- END: EVERYTHING INSIDE -->
 
 <?php get_footer() ?>

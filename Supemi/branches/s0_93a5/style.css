@@ -1,4 +1,4 @@
-0/*
+/*
 
 Theme Name: Supemi beta
 Theme URI: http://onethousandseas.org/you/supemi
@@ -146,7 +146,13 @@ width:500px;										/*  W  */
 
 #optional-sidebar {
 float: right;
+margin-top: -10px;										/*  W  */
 width: 175px;
+}
+
+#optional-sidebar-list {
+list-style: none;
+margin-left:-40px;
 }
 
 .navigation {										/*  Positions navigation, fixes tricksyness if styles aren't clearly spelled out.  */
@@ -198,11 +204,6 @@ color: gray; 										/*  O  */
 font-size:small; 										/*  O  */
 }
 
-#optional-sidebar-list {
-list-style: none;
-margin-left:-40px;
-}
-
 /* HEADER/FOOTER */
 
 #header-css {										/*  Positions header.  */
@@ -242,6 +243,24 @@ color:gray;
 padding-bottom:8px;
 padding-top:15px;
 text-align:center;
+}
+
+/* EXTRA TEMPLATE STYLES */
+
+#100-percent-width-top-container {
+	border: 1px solid;
+	overflow: hidden;
+	width: 100%;
+}
+
+#100-percent-width-post-container {
+	width: 45%;
+	float: left;
+}
+
+#100-percent-width-optional-sidebar {
+	width: 45%;
+	float: right;
 }
 
 /* CSS CLASSES REQUIRED BY WORDPRESS */
