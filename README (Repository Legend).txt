@@ -8,6 +8,6 @@ This repository hosts a number of projects, all of which follow the branches/tag
 
 = = = = = =
 
-* I'm fuzzy on the whole trunk/branch thing.  What do I mean, "bad"?
+* I'm fuzzy on the whole trunk/branch thing.  What do you mean, "bad"?
 * Try to imagine all life as you know it stopping instantaneously and every molecule in your body exploding at the speed of light if you use those.
 * Right. That's bad. Okay. All right. Important safety tip. Thanks, Egon.
