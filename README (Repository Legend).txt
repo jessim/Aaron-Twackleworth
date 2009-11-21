@@ -1,22 +1,13 @@
-C U R R E N T L Y
-= = = = = = = = =
+This repository hosts a number of projects, all of which follow the branches/tags/trunk repository layout:
 
-There are 2 different projects being hosted on this repository right now.
-
-Supemi
-Supemi Static
-
-L A Y O U T
 = = = = = =
 
 "Tags" contains all historically released stable versions and current released version.
 "Trunk" contains the current development build and is *usually*, but not always, stable.  Beta.
 "Branches" contain all unstable development branches, usually started from trunk.  Alpha.
 
-L E G E N D
 = = = = = =
 
-Folder naming conventions in any "/branches" directory:
-
-s = supemi
-ss = supemi static
+* I'm fuzzy on the whole trunk/branch thing.  What do I mean, "bad"?
+* Try to imagine all life as you know it stopping instantaneously and every molecule in your body exploding at the speed of light if you use those.
+* Right. That's bad. Okay. All right. Important safety tip. Thanks, Egon.
