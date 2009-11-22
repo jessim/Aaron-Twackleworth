@@ -4,7 +4,7 @@ This repository hosts a number of projects, all of which follow the branches/tag
 
 "Tags" contains all historically released stable versions and current released version.
 "Trunk" contains the current development build and is *usually*, but not always, stable.  Beta.
-"Branches" contain all unstable development branches, usually started from trunk.  Alpha.
+"Branches" contains workspace and all unstable development branches, usually started from trunk.  Alpha.
 
 = = = = = =
 
