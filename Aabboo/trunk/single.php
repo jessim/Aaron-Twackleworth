@@ -1,32 +1,27 @@
 <?php get_header() ?>
 
-<!-- #################### -->
-<!-- EVERYTHING INSIDE -->
-<!-- #################### -->
+<?php include( TEMPLATEPATH . '/constant1.php' ); ?>
 
-<div id="everything_inside_supemi">
+		<?php if (have_posts()) : ?>  	
 
-<!-- #################### -->
-<!-- TOP CONTENT -->
-<!-- #################### -->
+			<?php while (have_posts()) : the_post(); ?>
 
-<div id="top_container_supemi">
+			<div class="post-container">
 
-<!-- #################### -->
-<!-- BEGIN: LOOP -->
-<!-- #################### -->
+				<div class="date-css">
 
-<?php if (have_posts()) : ?>
+					<?php the_time('Y') ?><br />
+					<?php the_time('M') ?><br />
+					<?php the_time('j') ?><br />
+					<?php the_time('H:i') ?>
+				
+				</div>
 
-<?php while (have_posts()) : the_post(); ?>
+				<div <?php post_class(); ?> style="float : right;margin-bottom : 60px;margin-left : -150px;width : 500px;">
 
-<div <?php post_class(); ?> style="width : 500px;float : right;margin-right : 150px;margin-left : -150px;margin-bottom : 60px;">
-<!-- #################### -->
-<!-- BEGIN: DIFFERENT CONTENT FOR DIFFERENT TEMPLATES -->
-<!-- #################### -->
-<h2 class="go_up_supemi"><a href="<?php the_permalink()?>"><?php comments_number('(0)', '(1)', '(%)'); ?></a>&nbsp;&para;&nbsp;<?php the_title(); ?>&nbsp;<?php edit_post_link('(Edit)'); ?></h2>
+					<h2 class="top-align"><a href="<?php the_permalink()?>"><?php comments_number('(0)', '(1)', '(%)'); ?></a>&nbsp;&para;&nbsp;<?php the_title(); ?>&nbsp;<?php edit_post_link('(Edit)'); ?></h2>
 
-<div id="meta_info_supemi">
+<div id="meta-info">
 
 Author:  <?php the_author(); ?><br />
 Categories: <?php the_category(', ') ?><br />
@@ -38,7 +33,7 @@ Categories: <?php the_category(', ') ?><br />
 <?php the_content(); ?>
 <?php wp_link_pages(); ?>
 
-<div class="go_bold_supemi">
+<div class="boldnspace">
 <?php if ( comments_open() && pings_open() ) {
 // Both Comments and Pings are open ?>
 &para;&nbsp;Comments: OPEN<br />
@@ -60,54 +55,50 @@ Categories: <?php the_category(', ') ?><br />
 &para;&nbsp;Trackbacks: CLOSED
 
 <?php }; ?>
-</div> <!-- go_bold_supemi -->
+</div> <!-- boldnspace -->
 
 <?php comments_template(); ?>
+			
+				</div>
 
-</div> <!-- blog_post_supemi -->
+			</div>
+	
+			<?php endwhile; ?>  	<!-- END: LOOP -->
 
-<div class="date_supemi">
-<?php the_time('Y') ?><br />
-<?php the_time('M') ?><br />
-<?php the_time('j') ?><br />
-<?php the_time('H:i') ?><br />
-</div> <!-- date -->
+	</div>
 
-<?php endwhile; ?>
+	<div class="navigation">
 
-</div>
+			<?php if (show_posts_nav()) : ?>
 
-<!-- #################### -->
-<!-- END: LOOP -->
-<!-- #################### -->
+				<div id="pastnav">
 
-<div class="navigation">
-<?php previous_post('&larr;&nbsp;%', 'Previous post: ', 'yes'); ?>&nbsp;&#124;&nbsp;Present?&nbsp;&#124;&nbsp;<?php next_post('%&nbsp;&rarr;', 'Next post: ', 'yes'); ?>
-</div>
+					<?php next_posts_link('&larr;&nbsp;Past', 0) ?>
 
-<!-- #################### -->
-<!-- END: DIFFERENT CONTENT FOR DIFFERENT TEMPLATES -->
-<!-- #################### -->
+				</div>
 
-<?php else:?>
+				<div id="futurenav">
+		
+					<?php previous_posts_link('Future&nbsp;&rarr;', 0) ?>
 
-<div style="width : 500px;margin-left : 150px;margin-right : 150px;padding-bottom : 60px;">
-<h2>Not Found</h2>
-<?php _e("Sorry, but you are looking for something that isn't here.");?>
-</div>
+				</div>
+	
+			<?php endif; ?>
 
-<?php endif;?>
+	</div>					<!-- END: DIFFERENT CONTENT AS PER POST OR PAGE -->
 
-<!-- #################### -->
-<!-- BOTTOM CONTENT -->
-<!-- #################### -->
+			<?php else:?>
 
-<div id="bottom_container_supemi">
+	<div style="margin-left : 150px;margin-right : 150px;width : 500px;padding-bottom : 60px;">
 
-<?php get_sidebar(); ?>
+			<h2>Not Found</h2>
 
-</div>
+			<?php _e("Sorry, but you are looking for something that isn't here.");?>
+	
+	</div>
 
-</div>
+		<?php endif;?>
+
+<?php include( TEMPLATEPATH . '/constant2.php' ); ?>
 
 <?php get_footer() ?>

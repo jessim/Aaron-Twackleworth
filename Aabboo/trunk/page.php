@@ -1,66 +1,67 @@
 <?php get_header() ?>
 
-<!-- #################### -->
-<!-- EVERYTHING INSIDE -->
-<!-- #################### -->
+<?php include( TEMPLATEPATH . '/constant1.php' ); ?>
 
-<div id="everything_inside_supemi">
+		<?php if (have_posts()) : ?>  	
 
-<!-- #################### -->
-<!-- TOP CONTENT -->
-<!-- #################### -->
+			<?php while (have_posts()) : the_post(); ?>
 
-<div id="top_container_supemi">
+			<div class="post-container">
 
-<!-- #################### -->
-<!-- BEGIN: LOOP -->
-<!-- #################### -->
+				<div class="date-css">
+		
+					<!-- Nothing here, it's a page. -->
+		
+				</div>
 
-<?php if (have_posts()) : ?>
+				<div <?php post_class(); ?> style="float : right;margin-bottom : 60px;margin-left : -150px;width : 500px;">
 
-<?php while (have_posts()) : the_post(); ?>
+					<h2 class="top-align"><a href="<?php the_permalink()?>"><?php comments_number('(0)', '(1)', '(%)'); ?></a>&nbsp;&para;&nbsp;<?php the_title(); ?>&nbsp;<?php edit_post_link('(Edit)'); ?></h2>
 
-<div <?php post_class(); ?> style="width : 500px;float : right;margin-right : 150px;margin-left : -150px;margin-bottom : 60px;">
-<!-- #################### -->
-<!-- BEGIN: DIFFERENT CONTENT FOR DIFFERENT TEMPLATES -->
-<!-- #################### -->
-<h2 class="go_up_supemi">&para;&nbsp;<?php the_title(); ?>&nbsp;<?php edit_post_link('(Edit)'); ?></h2>
-<?php the_content(); ?>
-<?php wp_link_pages(); ?>
-<?php comments_template(); ?>
-</div> <!-- blog_post_supemi -->
+					<?php the_content(); ?>
+					
+					<?php wp_link_pages(); ?>
+			
+				</div>
 
-<?php endwhile; ?>
+			</div>
+	
+			<?php endwhile; ?>  	<!-- END: LOOP -->
 
-</div>
+	</div>
 
-<!-- #################### -->
-<!-- END: LOOP -->
-<!-- #################### -->
+	<div class="navigation">
 
-<!-- #################### -->
-<!-- END: DIFFERENT CONTENT FOR DIFFERENT TEMPLATES -->
-<!-- #################### -->
+			<?php if (show_posts_nav()) : ?>
 
-<?php else:?>
+				<div id="pastnav">
 
-<div class="navigation">
-<h2>Not Found</h2>
-<?php _e("Sorry, but you are looking for something that isn't here.");?>
-</div>
+					<?php next_posts_link('&larr;&nbsp;Past', 0) ?>
 
-<?php endif;?>
+				</div>
 
-<!-- #################### -->
-<!-- BOTTOM CONTENT -->
-<!-- #################### -->
+				<div id="futurenav">
+		
+					<?php previous_posts_link('Future&nbsp;&rarr;', 0) ?>
 
-<div id="bottom_container_supemi">
+				</div>
+	
+			<?php endif; ?>
 
-<?php get_sidebar(); ?>
+	</div>					<!-- END: DIFFERENT CONTENT AS PER POST OR PAGE -->
 
-</div>
+			<?php else:?>
 
-</div>
+	<div style="margin-left : 150px;margin-right : 150px;width : 500px;padding-bottom : 60px;">
+
+			<h2>Not Found</h2>
+
+			<?php _e("Sorry, but you are looking for something that isn't here.");?>
+	
+	</div>
+
+		<?php endif;?>
+
+<?php include( TEMPLATEPATH . '/constant2.php' ); ?>
 
 <?php get_footer() ?>

@@ -1,93 +1,75 @@
 <?php get_header() ?>
 
-<!-- #################### -->
-<!-- EVERYTHING INSIDE -->
-<!-- #################### -->
+<?php include( TEMPLATEPATH . '/constant1.php' ); ?>
 
-<div id="everything_inside_supemi">
+		<?php if (have_posts()) : ?>  	
 
-<!-- #################### -->
-<!-- TOP CONTENT -->
-<!-- #################### -->
+			<?php while (have_posts()) : the_post(); ?>
 
-<div id="top_container_supemi">
+			<div class="post-container">
 
-<div id="side-b">
-<?php include ('sidebar-optional.php'); ?>
-</div>
+				<div class="date-css">
 
-<!-- #################### -->
-<!-- BEGIN: LOOP -->
-<!-- #################### -->
+					<?php
+					if($post->post_type == 'post') {
+					echo the_time('Y')."<br />";
+					echo the_time('M')."<br />";
+					echo the_time('j')."<br />";
+					echo the_time('H:i');
+					} 
+					else {print "Page";}
+					?>
+				
+				</div>
 
-<?php if (have_posts()) : ?>
+				<div <?php post_class(); ?> style="float : right;margin-bottom : 60px;margin-left : -150px;width : 500px;">
 
-<?php while (have_posts()) : the_post(); ?>
+					<h2 class="top-align"><a href="<?php the_permalink()?>"><?php comments_number('(0)', '(1)', '(%)'); ?></a>&nbsp;&para;&nbsp;<?php the_title(); ?>&nbsp;<?php edit_post_link('(Edit)'); ?></h2>
 
-<div id="grapevine">
+					<?php the_content(); ?>
+					
+					<?php wp_link_pages(); ?>
+			
+				</div>
 
-<div class="date_supemi">
+			</div>
+	
+			<?php endwhile; ?>  	<!-- END: LOOP -->
 
-<?php
-if($post->post_type == 'post') {
-echo the_time('Y')."<br />";
-echo the_time('M')."<br />";
-echo the_time('j')."<br />";
-echo the_time('H:i');
-} 
-else {print "Page";}
-?>
+	</div>
 
-</div>
+	<div class="navigation">
 
-<div <?php post_class(); ?> style="width : 500px;float : right;margin-left : -150px;margin-bottom : 60px;">
-<!-- #################### -->
-<!-- BEGIN: DIFFERENT CONTENT FOR DIFFERENT TEMPLATES -->
-<!-- #################### -->
-<h2 class="go_up_supemi"><a href="<?php the_permalink()?>"><?php comments_number('(0)', '(1)', '(%)'); ?></a>&nbsp;&para;&nbsp;<?php the_title(); ?>&nbsp;<?php edit_post_link('(Edit)'); ?></h2>
-<?php the_content(); ?>
-<?php wp_link_pages(); ?>
-</div>
+			<?php if (show_posts_nav()) : ?>
 
-</div>
+				<div id="pastnav">
 
-<?php endwhile; ?>
+					<?php next_posts_link('&larr;&nbsp;Past', 0) ?>
 
-<!-- #################### -->
-<!-- END: LOOP -->
-<!-- #################### -->
+				</div>
 
-</div>
+				<div id="futurenav">
+		
+					<?php previous_posts_link('Future&nbsp;&rarr;', 0) ?>
 
-<div class="navigation">
-<?php if (show_posts_nav()) : ?>
-<div id="pastnav"><?php next_posts_link('&larr;&nbsp;Past', 0) ?></div><div id="futurenav"><?php previous_posts_link('Future&nbsp;&rarr;', 0) ?></div>
-<?php endif; ?>
-</div>
+				</div>
+	
+			<?php endif; ?>
 
-<!-- #################### -->
-<!-- END: DIFFERENT CONTENT FOR DIFFERENT TEMPLATES -->
-<!-- #################### -->
+	</div>					<!-- END: DIFFERENT CONTENT AS PER POST OR PAGE -->
 
-<?php else:?>
+			<?php else:?>
 
-<div style="width : 500px;margin-left : 150px;margin-right : 150px;padding-bottom : 60px;">
-<h2>Not Found</h2>
-<?php _e("Sorry, but you are looking for something that isn't here.");?>
-</div>
+	<div style="margin-left : 150px;margin-right : 150px;width : 500px;padding-bottom : 60px;">
 
-<?php endif;?>
+			<h2>Not Found</h2>
 
-<!-- #################### -->
-<!-- BOTTOM CONTENT -->
-<!-- #################### -->
+			<?php _e("Sorry, but you are looking for something that isn't here.");?>
+	
+	</div>
 
-<div id="bottom_container_supemi">
+		<?php endif;?>
 
-<?php get_sidebar(); ?>
-
-</div>
-
-</div>
+<?php include( TEMPLATEPATH . '/constant2.php' ); ?>
 
 <?php get_footer() ?>

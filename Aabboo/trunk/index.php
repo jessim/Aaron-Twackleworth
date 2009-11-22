@@ -1,22 +1,14 @@
 <?php get_header() ?>
 
-<div id="everything_inside_supemi">  		<!-- BEGIN: EVERYTHING INSIDE -->
+<?php include( TEMPLATEPATH . '/constant1.php' ); ?>
 
-	<div id="top_container_supemi">  	<!-- TOP CONTENT -->
-
-		<div id="optionalsidebarcss">
-			
-			<?php include ('sidebar-optional.php'); ?>
-
-		</div>
-
-		<?php if (have_posts()) : ?>  	<!-- BEGIN: LOOP -->
+<?php if (have_posts()) : ?>  	
 
 			<?php while (have_posts()) : the_post(); ?>
 
-			<div class="postcontainercss">
+			<div class="post-container">
 
-				<div class="date_supemi">
+				<div class="date-css">
 
 					<?php the_time('Y') ?><br />
 					<?php the_time('M') ?><br />
@@ -27,9 +19,7 @@
 
 				<div <?php post_class(); ?> style="float : right;margin-bottom : 60px;margin-left : -150px;width : 500px;">
 
-						<!-- BEGIN: DIFFERENT CONTENT AS PER POST OR PAGE -->
-	
-					<h2 class="go_up_supemi"><a href="<?php the_permalink()?>"><?php comments_number('(0)', '(1)', '(%)'); ?></a>&nbsp;&para;&nbsp;<?php the_title(); ?>&nbsp;<?php edit_post_link('(Edit)'); ?></h2>
+					<h2 class="top-align"><a href="<?php the_permalink()?>"><?php comments_number('(0)', '(1)', '(%)'); ?></a>&nbsp;&para;&nbsp;<?php the_title(); ?>&nbsp;<?php edit_post_link('(Edit)'); ?></h2>
 
 					<?php the_content(); ?>
 					
@@ -61,7 +51,9 @@
 	
 			<?php endif; ?>
 
-	</div>					<!-- END: DIFFERENT CONTENT AS PER POST OR PAGE -->
+	</div>
+
+					<!-- END: DIFFERENT CONTENT AS PER POST OR PAGE -->
 
 			<?php else:?>
 
@@ -75,12 +67,6 @@
 
 		<?php endif;?>
 
-	<div id="bottom_container_supemi">	<!-- BOTTOM CONTENT -->
-
-		<?php get_sidebar(); ?>
-
-	</div>
-
-</div>						<!-- END: EVERYTHING INSIDE -->
+<?php include( TEMPLATEPATH . '/constant2.php' ); ?>
 
 <?php get_footer() ?>

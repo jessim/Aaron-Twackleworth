@@ -15,13 +15,13 @@
 
 <?php if($comments) : ?>  
 
-<div class="go_bold_supemi"><?php comments_number('0 responses','1 response','% responses'); ?></div>
+<div class="boldnspace"><?php comments_number('0 responses','1 response','% responses'); ?></div>
 
     <ol>  
 
      <?php foreach($comments as $comment) : ?>  
 
-         <li class="each_comment_supemi" id="comment-<?php comment_ID() ?>">  
+         <li class="comment-space-indiv" id="comment-<?php comment_ID() ?>">  
              <?php if ($comment->comment_approved == '0') : ?>  
                  Your comment is awaiting approval
              <?php endif; ?>  
@@ -45,7 +45,7 @@
 <?php comment_date('<b>M</b>'); ?><br />
 <?php comment_date('<b>j</b>'); ?><br />
 <?php comment_time('<b>H:i</b>'); ?>
-<div class="comment_text_supemi"><?php comment_text(); ?></div>
+<div class="comment-justify"><?php comment_text(); ?></div>
          </li> 
 
              <?php endforeach; ?>
@@ -56,7 +56,7 @@
 
 <?php if ( comments_open() ) : ?>
 
-<div class="go_bold_supemi"><?php comment_form_title( 'Leave a Reply', 'Leave a Reply to %s' ); ?></div>
+<div class="boldnspace"><?php comment_form_title( 'Leave a Reply', 'Leave a Reply to %s' ); ?></div>
 
 <?php if ( get_option('comment_registration') && !is_user_logged_in() ) : ?>
 
