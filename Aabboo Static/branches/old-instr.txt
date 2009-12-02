@@ -1,0 +1,5 @@
+<h3>Instructions</h3>
+<ol>
+	<li>Suggested styling options: custom-header, custom-colors, replace word menu with image menu, change width, flip over the layout, etc.</li>
+	<li> If you decide to make changes and repackage it, <a href="http://onethousandseas.org/contact">drop me a line</a>, I'd really like to hear about it and link to it.</li>
+</ol>
