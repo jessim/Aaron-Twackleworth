@@ -1,8 +1,0 @@
-<h3>Instructions</h3>
-<ol>
-	<li>You will need the following plugin:  <a href="http://mtekk.weblogs.us/code/breadcrumb-navxt/">Breadcrumb NavXT</a></li>
-	<li>Suggested styling options: background-color, font-size, font-color, font-family, link colors, <a> colors, header title vs. header image.</a></li>
-	<li>If you decide to make changes and repackage it, <a href="http://onethousandseas.org/contact">drop me a line</a>, I'd really like to hear about it and link to it.</li>
-	<li>For RTL language support, overwrite all files in main theme with files in the folder "rtl".</li>
-	<li>To get the words "You are here:" to appear in breadcrumb navigation, simply enter "You are here: " in the Home Prefix field under Breadcrumb NavXT's General settings.</li>
-</ol>
