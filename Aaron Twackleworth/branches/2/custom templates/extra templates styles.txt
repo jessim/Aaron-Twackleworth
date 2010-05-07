@@ -1,0 +1,17 @@
+/* EXTRA TEMPLATE STYLES */
+
+#xtemp-100-width-top-container {
+	border: 1px solid;
+	overflow: hidden;
+	width: 100%;
+}
+
+#xtemp-100-width-post-container {
+	width: 45%;
+	float: left;
+}
+
+#xtemp-100-width-optional-sidebar {
+	width: 45%;
+	float: right;
+}
