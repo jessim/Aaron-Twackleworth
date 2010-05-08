@@ -1,6 +1,8 @@
 Aaron Twackleworth is a Wordpress theme.
 
-It was formerly named Supemi.
+It was formerly named Aabboo.
+
+And before that it was formerly named Supemi.
 
 For more information go to: 
 
