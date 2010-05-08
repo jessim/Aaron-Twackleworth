@@ -1,124 +1,3 @@
-/* *{border: 1px solid gray;} */
-
-.post-meta{font-size:small;font-style:italic;}
-
-#title,#top-wrapper,#sidebar-wrapper,#footer{margin-top:100px;}
-
-#nav-wrapper{margin-top:50px;}
-
-#posts{margin-bottom:50px;}
-
-.widget-spacer{height:20px;}
-
-.h6custom{font-size:1em;}
-
-#header-wrapper {
-background-color:#cfcfcf;
-	overflow: hidden;
-	width: 100%;
-padding:7px 0px 7px 0px;
-height:27px;
-}
-
-#header-left {
-	width: auto;
-	float: left;
-
-}
-
-#header-right {
-	width: 500px;
-	float: right;
-text-align:right;
-}
-
-#searchform{position:absolute;right:250px;}
-
-#translation{position:absolute;right:7px;top:8px;}
-
-#title{text-align:center;}
-
-#top-wrapper {
-
-	overflow: hidden;
-	width: 100%;
-}
-
-#all-entry-wrapper {
-	width: 80%;
-	float: left;
-overflow:hidden;
-}
-
-/* POSTS INHERITS SIZE FROM ALL-ENTRY-WRAPPER */
-
-#posts {
-	width: 76%; 
-	float: right;
-
-}
-
-/* DATE MUST ADD UP TO WIDTH OF DATE + 2% + WIDTH OF POSTS */
-
-#date {
-	width: 22%;
-	float: left;
-text-align:right;
-font-size:1.5em;
-font-weight:bold;
-}
-
-#optsidebar {
-	width: 18%;
-	float: right;
-
-}
-
-#nav-wrapper {
-
-	overflow: hidden;
-	width: 62%;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-#nav-past {
-	width: 49%;
-	float: left;
-
-}
-
-#nav-future {
-	width: 49%;
-	float: right;
-text-align:right;
-}
-
-#sidebar-wrapper {
-
-	overflow: hidden;
-	width: 62%;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-#sidebar1 {
-	width: 49%;
-	float: left;
-
-}
-
-#sidebar2 {
-	width: 49%;
-	float: right;
-
-}
-
-
-#footer{text-align:center;}
-
-#tagline{text-align:center;}
-
 html, body, div, span, applet, object, iframe,
 blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -129,7 +8,7 @@ fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td {
 	margin: 0;
 	padding: 0;
- 	border: 0; 
+/* 	border: 0; */
 	outline: 0;
 	font-weight: inherit;
 	font-style: inherit;
@@ -172,7 +51,7 @@ ol, ul {
 */
 
 ol, ul, li, p{
- 	border: 0; 
+/* 	border: 0; */
 	outline: 0;
 	font-weight: inherit;
 	font-style: inherit;
@@ -186,14 +65,12 @@ h1, h2, h3, h4, h5, h6
 {
 	margin: 0;
 	padding: 0;
- 	border: 0; 
+/* 	border: 0; */
 	outline: 0;
 	font-style: inherit;
 	font-family: inherit;
 	vertical-align: baseline;
 }
-
-/* cssstickyfooter.com */
 
 html, body {height: 100%;}
 
@@ -221,8 +98,6 @@ body:before {
 		#wrap {display:table;height:100%}
 	</style>
 <![endif]-->
-
-/* http://codex.wordpress.org/CSS#WordPress_Generated_Classes */
 
 .aligncenter,
 div.aligncenter {

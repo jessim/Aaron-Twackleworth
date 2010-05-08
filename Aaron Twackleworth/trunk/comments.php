@@ -1,4 +1,8 @@
 <?php
+/**
+ * @package WordPress
+ * @subpackage Default_Theme
+ */
 
 // Do not delete these lines
 	if (!empty($_SERVER['SCRIPT_FILENAME']) && 'comments.php' == basename($_SERVER['SCRIPT_FILENAME']))
@@ -13,55 +17,47 @@
 
 <!-- You can start editing here. -->
 
-<?php if($comments) : ?>  
+<?php if ( have_comments() ) : ?>
+	<h3 id="comments"><?php comments_number('No Responses', 'One Response', '% Responses' );?> to &#8220;<?php the_title(); ?>&#8221;</h3>
 
-<div class="boldnspace"><?php comments_number('0 responses','1 response','% responses'); ?></div>
+	<div class="navigation">
+		<div class="alignleft"><?php previous_comments_link() ?></div>
+		<div class="alignright"><?php next_comments_link() ?></div>
+	</div>
 
-    <ol>  
+	<ol class="commentlist">
+	<?php wp_list_comments(); ?>
+	</ol>
 
-     <?php foreach($comments as $comment) : ?>  
+	<div class="navigation">
+		<div class="alignleft"><?php previous_comments_link() ?></div>
+		<div class="alignright"><?php next_comments_link() ?></div>
+	</div>
+ <?php else : // this is displayed if there are no comments so far ?>
 
-         <li class="comment-space-indiv" id="comment-<?php comment_ID() ?>">  
-             <?php if ($comment->comment_approved == '0') : ?>  
-                 Your comment is awaiting approval
-             <?php endif; ?>  
-<?php if(function_exists('get_avatar')) { echo get_avatar($comment, '50'); } ?>
-<?php comment_type('<strong>COMMENT</strong>', '<strong>TRACKBACK</strong>', ''); ?> from <strong><?php comment_author(); ?></strong> <?php edit_comment_link('(edit)'); ?> <a href="<?php get_permalink(); ?>#comment-<?php comment_ID(); ?>">(permalink)</a>
+	<?php if ( comments_open() ) : ?>
+		<!-- If comments are open, but there are no comments. -->
 
-<?php 
-	if($comment->comment_author_url != "") 
-		{ ?>
-			<?php comment_author_url_link('(url)', '', ''); ?>
-		<?php } 
-	else 
-		{ ?>
-			(url)
-		<?php } 
-?>
+	 <?php else : // comments are closed ?>
+		<!-- If comments are closed. -->
+		<p class="nocomments">Comments are closed.</p>
 
-<br />
+	<?php endif; ?>
+<?php endif; ?>
 
-<?php comment_date('<b>Y</b>'); ?><br />
-<?php comment_date('<b>M</b>'); ?><br />
-<?php comment_date('<b>j</b>'); ?><br />
-<?php comment_time('<b>H:i</b>'); ?>
-<div class="comment-justify"><?php comment_text(); ?></div>
-         </li> 
-
-             <?php endforeach; ?>
-
-     </ol>  
-
-<?php endif; ?> 
 
 <?php if ( comments_open() ) : ?>
 
-<div class="boldnspace"><?php comment_form_title( 'Leave a Reply', 'Leave a Reply to %s' ); ?></div>
+<div id="respond">
+
+<h3><?php comment_form_title( 'Leave a Reply', 'Leave a Reply to %s' ); ?></h3>
+
+<div class="cancel-comment-reply">
+	<small><?php cancel_comment_reply_link(); ?></small>
+</div>
 
 <?php if ( get_option('comment_registration') && !is_user_logged_in() ) : ?>
-
 <p>You must be <a href="<?php echo wp_login_url( get_permalink() ); ?>">logged in</a> to post a comment.</p>
-
 <?php else : ?>
 
 <form action="<?php echo get_option('siteurl'); ?>/wp-comments-post.php" method="post" id="commentform">
@@ -72,24 +68,29 @@
 
 <?php else : ?>
 
-<p><input type="text" name="author" id="author" value="<?php echo esc_attr($comment_author); ?>" size="22" tabindex="1" /><label for="author">Name <?php if ($req) echo "(required)"; ?></label></p>
+<p><input type="text" name="author" id="author" value="<?php echo esc_attr($comment_author); ?>" size="22" tabindex="1" <?php if ($req) echo "aria-required='true'"; ?> />
+<label for="author"><small>Name <?php if ($req) echo "(required)"; ?></small></label></p>
 
-<p><input type="text" name="email" id="email" value="<?php echo esc_attr($comment_author_email); ?>" size="22" tabindex="2" /><label for="email">Mail (will not be published) <?php if ($req) echo "(required)"; ?></label></p>
+<p><input type="text" name="email" id="email" value="<?php echo esc_attr($comment_author_email); ?>" size="22" tabindex="2" <?php if ($req) echo "aria-required='true'"; ?> />
+<label for="email"><small>Mail (will not be published) <?php if ($req) echo "(required)"; ?></small></label></p>
 
-<p><input type="text" name="url" id="url" value="<?php echo esc_attr($comment_author_url); ?>" size="22" tabindex="3" /><label for="url">Website</label></p>
+<p><input type="text" name="url" id="url" value="<?php echo esc_attr($comment_author_url); ?>" size="22" tabindex="3" />
+<label for="url"><small>Website</small></label></p>
 
 <?php endif; ?>
 
-<p><small><strong>XHTML:</strong> You can use these tags: <code><?php echo allowed_tags(); ?></code></small></p>
+<!--<p><small><strong>XHTML:</strong> You can use these tags: <code><?php echo allowed_tags(); ?></code></small></p>-->
 
-<p><textarea name="comment" id="comment" cols="10" rows="10" tabindex="4"></textarea></p>
+<p><textarea name="comment" id="comment" cols="58" rows="10" tabindex="4"></textarea></p>
 
-<p><input name="submit" type="submit" id="submit" tabindex="5" value="Submit Comment" /><?php comment_id_fields(); ?></p>
-
+<p><input name="submit" type="submit" id="submit" tabindex="5" value="Submit Comment" />
+<?php comment_id_fields(); ?>
+</p>
 <?php do_action('comment_form', $post->ID); ?>
 
 </form>
 
 <?php endif; // If registration required and not logged in ?>
+</div>
 
 <?php endif; // if you delete this the sky will fall on your head ?>
