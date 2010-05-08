@@ -1,0 +1,101 @@
+/* *{border: 1px solid gray;} */
+
+#header-wrapper {
+
+	overflow: hidden;
+	width: 100%;
+}
+
+#header-left {
+	width: 49%;
+	float: left;
+
+}
+
+#header-right {
+	width: 49%;
+	float: right;
+text-align:right;
+}
+
+#title{text-align:center;}
+
+#top-wrapper {
+
+	overflow: hidden;
+	width: 100%;
+}
+
+#all-entry-wrapper {
+	width: 80%;
+	float: left;
+overflow:hidden;
+}
+
+/* POSTS INHERITS SIZE FROM ALL-ENTRY-WRAPPER */
+
+#posts {
+	width: 76%; 
+	float: right;
+
+}
+
+/* DATE MUST ADD UP TO WIDTH OF DATE + 2% + WIDTH OF POSTS */
+
+#date {
+	width: 22%;
+	float: left;
+text-align:right;
+
+}
+
+#optsidebar {
+	width: 18%;
+	float: right;
+
+}
+
+#nav-wrapper {
+
+	overflow: hidden;
+	width: 62%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#nav-past {
+	width: 49%;
+	float: left;
+
+}
+
+#nav-future {
+	width: 49%;
+	float: right;
+text-align:right;
+}
+
+#sidebar-wrapper {
+
+	overflow: hidden;
+	width: 62%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#sidebar1 {
+	width: 49%;
+	float: left;
+
+}
+
+#sidebar2 {
+	width: 49%;
+	float: right;
+
+}
+
+
+#footer{text-align:center;}
+
+#tagline{text-align:center;}

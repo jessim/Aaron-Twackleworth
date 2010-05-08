@@ -1,0 +1,64 @@
+<!--
+<div id="top-wrapper">
+
+	<div id="all-entry-wrapper">
+
+<?php 
+if ( is_archive() ) {query_posts($query_string . '&showposts=-1'); }
+
+if (have_posts()) : ?>
+<?php while (have_posts()) : the_post(); ?>
+
+		<div class="posts">
+
+<h2 id="post-<?php the_ID(); ?>"> <a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title(); ?>"><?php comments_number('0', '1', '%'); ?></a> &para; <?php the_title(); ?> <?php edit_post_link('(Edit)'); ?></h2> 
+
+<!-- if (is_single()) {
+   echo 'This is just one of many fabulous entries in the ' . single_cat_title() . ' category!';
+} -->
+
+<div class="entry">
+	<?php the_content('Read the rest of this entry &raquo;'); ?>
+</div>
+
+<p class="postmetadata">
+Posted in <?php the_category(', ') ?> </p>
+
+<!--
+<?php trackback_rdf(); ?>
+-->
+
+<?php comments_template(); ?> 
+
+		</div>
+
+		<div class="date">
+
+			<?php the_time('Y') ?> <br />
+			<?php the_time('M') ?> <br />
+			<?php the_time('j') ?> 
+
+
+		</div>
+
+<?php endwhile; ?>
+
+
+<?php else : ?>
+ <h2 class="center">Not Found</h2>
+ <p class="center">
+<?php _e("Sorry, but you are looking for something that isn't here."); ?></p>
+
+			  <?php endif; ?>
+
+</div>
+
+	<div id="optsidebar">
+
+<?php if ( !function_exists('dynamic_sidebar')
+|| !dynamic_sidebar('Optional sidebar') ) : ?>
+<?php endif; ?>
+
+</div>
+
+</div> -->

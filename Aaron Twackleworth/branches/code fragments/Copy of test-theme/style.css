@@ -1,0 +1,92 @@
+*{border: 1px solid red;}
+
+#header-wrapper {
+
+	overflow: hidden;
+	width: 100%;
+}
+
+#header-left {
+	width: 49%;
+	float: left;
+
+}
+
+#header-right {
+	width: 49%;
+	float: right;
+text-align:right;
+}
+
+#title{text-align:center;font-size:2em;font-weight:bold;}
+
+#content-wrapper {
+
+	overflow: hidden;
+	width: 100%;
+}
+
+#post-wrapper {
+	width: 83%;
+	float: left;
+overflow:hidden;
+}
+
+#date {
+	width: 15%;
+	float: left;
+text-align:right;
+
+}
+
+#posts {
+	width: 83%; 
+	float: right;
+
+}
+
+
+#optsidebar {
+	width: 15%;
+	float: right;
+
+}
+
+#nav-wrapper {
+
+	overflow: hidden;
+	width: 62%;
+}
+
+#nav-past {
+	width: 49%;
+	float: left;
+
+}
+
+#nav-future {
+	width: 49%;
+	float: right;
+text-align:right;
+}
+
+#sidebar-wrapper {
+
+	overflow: hidden;
+	width: 62%;
+}
+
+#sidebar1 {
+	width: 49%;
+	float: left;
+
+}
+
+#sidebar2 {
+	width: 49%;
+	float: right;
+
+}
+
+
+#footer{text-align:center;}
