@@ -1,8 +1,18 @@
+.avatar{margin-top:25px;}
+
+.nocomments{font-weight:bold;font-size:1.3em;margin-top:50px;}
+
+#comments{margin-top:50px;}
+
+#leave-a-reply{margin-top:50px;}
+
 /* *{border: 1px solid gray;} */
 
 .post-meta{font-size:small;font-style:italic;}
 
 #title,#top-wrapper,#sidebar-wrapper,#footer{margin-top:100px;}
+
+#sidebar-wrapper{margin-bottom:100px;}
 
 #nav-wrapper{margin-top:50px;}
 
@@ -117,10 +127,10 @@ text-align:right;
 
 #footer{text-align:center;}
 
-#tagline{text-align:center;}
+#tagline{text-align:center;font-weight:bold;}
 
 html, body, div, span, applet, object, iframe,
-blockquote, pre,
+/* blockquote, pre, */
 a, abbr, acronym, address, big, cite, code,
 del, dfn, em, font, img, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var,
